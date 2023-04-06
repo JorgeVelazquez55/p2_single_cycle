@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at core_risc_v.v(15): object "pc_adder" differs only in case from object "PC_adder" in the same scope File: C:/desi/D_Procesadores/DM_single_cycle_p2/src/core_risc_v.v Line: 15
+Info (10281): Verilog HDL Declaration information at core_risc_v.v(15): object "pc_add_imm" differs only in case from object "PC_add_imm" in the same scope File: C:/desi/D_Procesadores/DM_single_cycle_p2/src/core_risc_v.v Line: 15
+Warning (10268): Verilog HDL information at uart_shif_reg.v(29): always construct contains both blocking and non-blocking assignments File: C:/desi/D_Procesadores/DM_single_cycle_p2/src/uart/uart_shif_reg.v Line: 29
+Info (10281): Verilog HDL Declaration information at Control_unit_riscv.v(15): object "ALUcontrol" differs only in case from object "ALUControl" in the same scope File: C:/desi/D_Procesadores/DM_single_cycle_p2/src/FSM/Control_unit_riscv.v Line: 15

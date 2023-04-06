@@ -1,0 +1,217 @@
+module core_risc_v #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32)(
+	input clk_O,
+	input rst,
+	input en,
+	input [(DATA_WIDTH-1):0] data_o_map,
+ 	output MemWrite,
+	output [(ADDR_WIDTH-1):0] addr_ram,
+	output [(DATA_WIDTH-1):0] Data_B
+	
+);
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Declarations for each interconection.
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+wire IorD, IRWrite, PCSrc, PCWrite, ALUSrcA, RegWrite, ALU_Out_en, PC_Src, zeroflag, PCen, bbeq, bbne;
+wire [31:0] nxt_PC, PC, ALU_Out, ALU_Result, Instr_out, srcA, srcB, Data_A, to_ALU,Data_out, rd1, rd2, Imm, Result, WD3_Out, PCPrev, ImmM4;
+wire [4:0]A3_Out;
+wire [1:0]ALUSrcB1, ALUSrcA1, MemToReg;
+wire [3:0]ALUcontrol;
+wire [2:0]Ins_type;
+//assign rst = ~n_rst; ///HABILITAR AL PROGRAMAR Y CAMBIAR EL DEL MAIN
+assign PCen = (zeroflag & bbeq) | (~zeroflag & bbne) | PCWrite;
+
+////////////////////////////////////////////////////////
+//PC Register.
+////////////////////////////////////////////////////////
+Register #(.DATA_WIDTH(32)) PCReg(
+.D(nxt_PC),
+.dafault_D(32'h0040_0000),
+.rst(rst),
+.en(PCen),
+.clk(clk_O),
+.Q(PC)
+);
+////////////////////////////////////////////////////////
+//RAM Input Address MUX.
+//  OP1: PC.
+//  OP2: ALU output.
+////////////////////////////////////////////////////////
+Mux_2to1 #(.InLength(32))addr(
+.A(PC), 
+.B(ALU_Out),
+.Sel(IorD),
+.s(addr_ram)
+);
+////////////////////////////////////////////////////////
+//PC Previous.
+////////////////////////////////////////////////////////
+Register #(.DATA_WIDTH(32)) PCPrevious(
+.D(PC),
+.dafault_D(32'h0000_0000),
+.rst(rst),
+.en(1'b1),
+.clk(clk_O),
+.Q(PCPrev)
+);  
+////////////////////////////////////////////////////////
+//Instruction Register.
+////////////////////////////////////////////////////////
+Register #(.DATA_WIDTH(32)) Instruction(
+.D(data_o_map),
+.dafault_D(32'h0000_0000),
+.rst(rst),
+.en(IRWrite),
+.clk(clk_O),
+.Q(Instr_out)
+);  
+////////////////////////////////////////////////////////
+//Data Register.
+////////////////////////////////////////////////////////
+Register #(.DATA_WIDTH(32)) Data(
+.D(data_o_map),
+.dafault_D(32'h0000_0000),
+.rst(rst),
+.en(1'b1),//Pendiente definir estado
+.clk(clk_O),
+.Q(Data_out)
+); 
+///////////////////////////////////////////////////////////////
+//4 to 1 MUX declarations.
+//Define data from alu, from memory, from PC previous
+///////////////////////////////////////////////////////////////
+Mux_4to1 #(.InLength(32))data_pc_rd(
+.A(ALU_Out), 
+.B(Data_out), 
+.C(PCPrev),
+.D(Imm),
+.Sel(MemToReg),
+.s(WD3_Out)
+);
+///////////////////////////////////////////////////////////////////////
+//Register File Module declaration.
+///////////////////////////////////////////////////////////////////////
+RegisterFile RegFile(
+.clk(clk_O),
+.rst(rst),
+.we3(RegWrite),
+.A1(Instr_out[19:15]),
+.A2(Instr_out[24:20]),
+.A3(Instr_out[11:7]),
+.wd3(WD3_Out),
+.rd1(rd1),
+.rd2(rd2)
+); 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Sing Extend and Zero Extend Module declaration.
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+imm GenImm(
+  .Datain(Instr_out[31:7]),
+  .Ins_type(Ins_type),
+  .Imm(Imm),
+  .Doutm4(ImmM4)
+);
+////////////////////////////////////////////////////////
+//A data Register. Register File output A.
+////////////////////////////////////////////////////////
+Register #(.DATA_WIDTH(32)) DataA(
+.D(rd1),
+.dafault_D(32'h0000_0000),
+.rst(rst),
+.en(1'b1),//Pendiente definir estado
+.clk(clk_O),
+.Q(Data_A)
+); 
+////////////////////////////////////////////////////////
+//B data Register. Register File output B.
+////////////////////////////////////////////////////////
+Register #(.DATA_WIDTH(32)) DataB(
+.D(rd2),
+.dafault_D(32'h0000_0000),
+.rst(rst),
+.en(1'b1),//Pendiente definir estado
+.clk(clk_O),
+.Q(Data_B)
+);
+///////////////////////////////////////////////////////////////
+//4 to 1 MUX declarations.
+//Define data from register, pc, pc_previous for jumps
+///////////////////////////////////////////////////////////////
+Mux_4to1 #(.InLength(32))src_a(
+.A(Data_A), 
+.B(PC), 
+.C(PCPrev),
+.D(32'h3f),
+.Sel(ALUSrcA1),
+.s(srcA)
+);
+///////////////////////////////////////////////////////////////
+//4 to 1 MUX declarations.
+//Define data from register, +4 for PC, Immediate data
+/////////////////////////////////////////////////////////////// 
+Mux_4to1 #(.InLength(32))src_b(
+.A(Data_B), 
+.B(32'h4), 
+.C(Imm),
+.D(32'h3f),
+.Sel(ALUSrcB1),
+.s(srcB)
+);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//ALU Module declaration.
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ALU ALU_Block(
+//Inputs
+.A(srcA),
+.B(srcB),
+.control(ALUcontrol),
+//Outputs
+.zeroflag(zeroflag),
+.negativeflag(),
+.Result(Result)
+);
+////////////////////////////////////////////////////////
+//ALU output Register.
+////////////////////////////////////////////////////////
+Register #(.DATA_WIDTH(32)) ALU_o(
+.D(Result),
+.dafault_D(32'h0000_0000),
+.rst(rst),
+.en(ALU_Out_en),
+.clk(clk_O),
+.Q(ALU_Out)
+);  
+
+////////////////////////////////////////////////////////
+//mUX 2:1 FOR DATA OR PC
+////////////////////////////////////////////////////////
+Mux_2to1 #(.InLength(32))Next_PC(
+.A(Result), 
+.B(ALU_Out),
+.Sel(PCSrc),
+.s(nxt_PC)
+);
+////////////////////////////////////////////////////////
+//mUX 2:1 FOR DATA OR PC
+////////////////////////////////////////////////////////
+Control_unit_riscv cu_riscV(
+//inputs
+.clk(clk_O),
+.rst(rst),
+.en(en),
+.mod(Instr_out[30]),
+.opcode(Instr_out[6:0]),
+.funct3(Instr_out[14:12]),
+.funct7(Instr_out[31:25]),
+
+//outputs
+.IorD(IorD), .MemWrite(MemWrite), .IRWrite(IRWrite), .RegWrite(RegWrite), .PCSrc(PCSrc), .PCWrite(PCWrite), .bbeq(bbeq), .bbne(bbne), .ALUOutEn(ALU_Out_en),
+.MemToReg(MemToReg),
+.ALUSrcB1(ALUSrcB1), 
+.ALUSrcA1(ALUSrcA1),
+.ALUcontrol(ALUcontrol),
+.Ins_type(Ins_type)
+);
+
+endmodule

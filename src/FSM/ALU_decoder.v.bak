@@ -1,0 +1,21 @@
+`timescale 1ns / 1ps
+
+module ALU_decoder(
+	input mod,
+	input [2:0]funct,
+	input [1:0]ALUop,
+	output reg [3:0]ALUcontrol
+);
+
+always @*
+	begin
+	  if (ALUop==2'b00)
+	  	ALUcontrol=4'b0000;
+	  else if (ALUop==2'b01)
+	  	ALUcontrol=4'b1000;
+	  else if (ALUop==2'b10)
+	  	ALUcontrol={mod,funct};	
+	  else
+	  	ALUcontrol=4'b0000;
+	end	
+endmodule
