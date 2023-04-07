@@ -1,0 +1,20 @@
+module UART_RX (
+//Inputs: TX (8sw, 1 button), RX(1 GPIO)
+	input clk,
+	input n_rst,
+	input tx_line,
+	output [7:0] data,
+	output wb,
+	output finish,
+	output busy
+);
+
+
+Bit_Rate_Pulse # (.delay_counts(2604) ) BR_pulse_rx (//5208
+.clk(clk), 
+.rst(rst_wait_tx), 
+.enable(bit_wait_tx), 
+.end_bit_time(end_bit_time) 
+);
+
+endmodule	

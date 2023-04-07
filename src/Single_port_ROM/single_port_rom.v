@@ -5,14 +5,14 @@ module single_port_rom
 	(input [(ADDR_WIDTH-1):0] addr,
 	output [(DATA_WIDTH-1):0] q );
 // ROM Variable Declaration
-reg [DATA_WIDTH-1:0] rom[99:0];
+reg [DATA_WIDTH-1:0] rom[63:0];
 // Initialize the ROM: put the memory content in the file
 // ROM_init.txt, for example. Read this file with $readmemh
 // without this file this design will not compile.
 // Memory initialization.
 initial
   begin
-    $readmemb("n_factorial_simulation.txt", rom);
+    $readmemh("Factorial.txt", rom);
   end
   
 assign q = rom[addr[31:2]];

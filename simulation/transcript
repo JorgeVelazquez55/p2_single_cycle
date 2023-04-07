@@ -1,0 +1,171 @@
+vsim work.RISCV_tb
+# vsim work.RISCV_tb 
+# Start time: 20:51:52 on Apr 06,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU/ALU.v(32): (vopt-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.RISCV_tb(fast)
+do {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/simulation/wave.do}
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UARTRx'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 3
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UARTTx'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 4
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/core/PCReg/Q'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 5
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/core/ROM/ROM_32bitD_programMemory/q'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 6
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/core/GenImm/Datain'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 7
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/core/GenImm/Imm'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 8
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/core/GenImm/Ins_type'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 9
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/core/RegFile/Regs/Q5'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 10
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/core/RegFile/Regs/Q8'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 11
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/MemCtrl/ADDROut'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 12
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/MemCtrl/Sel'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 13
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/uart0/addr'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 14
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/uart0/TxData'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 15
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/uart0/ReadReg'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 16
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/DataMUX/data'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 17
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/DataMUX/sel'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 18
+do {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/simulation/wave.do}
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UARTRx'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 3
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UARTTx'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 4
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/core/PCReg/Q'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 5
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/core/ROM/ROM_32bitD_programMemory/q'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 6
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/core/GenImm/Datain'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 7
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/core/GenImm/Imm'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 8
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/core/GenImm/Ins_type'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 9
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/core/RegFile/Regs/Q5'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 10
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/core/RegFile/Regs/Q8'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 11
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/MemCtrl/ADDROut'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 12
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/MemCtrl/Sel'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 13
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/uart0/addr'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 14
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/uart0/TxData'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 15
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/uart0/ReadReg'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 16
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/DataMUX/data'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 17
+# ** UI-Msg: (vish-4014) No objects found matching '/RISCV_tb/UUT/DataMUX/sel'.
+# Executing ONERROR command at macro E:\Documentos\Otros archivos\Cicuitos y Hardware\Verilog\MDE\RISCV_Single_Cycle\simulation\wave.do line 18
+run
+vsim -voptargs=+acc work.RISCV_tb
+# End time: 20:53:11 on Apr 06,2023, Elapsed time: 0:01:19
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" work.RISCV_tb 
+# Start time: 20:53:11 on Apr 06,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.RISCV_tb(fast)
+# Loading work.single_cycle_p2(fast)
+# Loading work.core_risc_v(fast)
+# Loading work.Register(fast)
+# Loading work.adder(fast)
+# Loading work.Mux_2to1(fast)
+# Loading work.memory_ROM(fast)
+# Loading work.single_port_rom(fast)
+# Loading work.Mux_4to1(fast)
+# Loading work.RegisterFile(fast)
+# Loading work.WriteControl(fast)
+# Loading work.Registers(fast)
+# Loading work.MUX32input(fast)
+# Loading work.imm(fast)
+# Loading work.ALU(fast)
+# Loading work.Control_unit_riscv(fast)
+# Loading work.ALU_decoder(fast)
+# Loading work.Control(fast)
+# Loading work.MemController(fast)
+# Loading work.MUXNInput(fast)
+# Loading work.UART(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO_in_out(fast)
+# Loading work.single_port_ram(fast)
+do {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/simulation/wave.do}
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/Instr_out
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q1
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q2
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q10
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q9
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q18
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q19
+run
+run
+run
+run
+add wave -position insertpoint sim:/RISCV_tb/UUT/uart0/TxRegD
+add wave -position insertpoint sim:/RISCV_tb/UUT/uart0/RxRegD
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.RISCV_tb(fast)
+# Loading work.single_cycle_p2(fast)
+# Loading work.core_risc_v(fast)
+# Loading work.Register(fast)
+# Loading work.adder(fast)
+# Loading work.Mux_2to1(fast)
+# Loading work.memory_ROM(fast)
+# Loading work.single_port_rom(fast)
+# Loading work.Mux_4to1(fast)
+# Loading work.RegisterFile(fast)
+# Loading work.WriteControl(fast)
+# Loading work.Registers(fast)
+# Loading work.MUX32input(fast)
+# Loading work.imm(fast)
+# Loading work.ALU(fast)
+# Loading work.Control_unit_riscv(fast)
+# Loading work.ALU_decoder(fast)
+# Loading work.Control(fast)
+# Loading work.MemController(fast)
+# Loading work.MUXNInput(fast)
+# Loading work.UART(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO_in_out(fast)
+# Loading work.single_port_ram(fast)
+run
+run
+run
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/simulation/wave.do}
+# End time: 20:58:39 on Apr 06,2023, Elapsed time: 0:05:28
+# Errors: 0, Warnings: 1

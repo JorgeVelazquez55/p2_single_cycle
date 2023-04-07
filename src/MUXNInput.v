@@ -1,0 +1,19 @@
+module MUXNInput (
+  input [1:0]sel,
+  input [31:0] Q0,
+  input [31:0] Q1,
+  input [31:0] Q2,
+  output [31:0] data
+);
+
+reg [31:0] Dout;
+assign data = Dout;
+always @ * begin
+  case (sel)
+    0: Dout = Q0;
+    1: Dout = Q1;
+    2: Dout = Q2;
+	 default: Dout = 0;
+  endcase
+end
+endmodule  

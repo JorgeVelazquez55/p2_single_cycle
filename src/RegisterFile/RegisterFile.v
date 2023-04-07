@@ -65,7 +65,7 @@ Registers Regs (
  .D(wd3),
  .clk(clk),
  .rst(rst),
- .en0(en[0]),
+ .en0(1'b0),
  .en1(en[1]),
  .en2(en[2]),
  .en3(en[3]),

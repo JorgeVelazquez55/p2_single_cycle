@@ -4,6 +4,7 @@ module core_risc_v #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32)(
 	input en,
 	input [(DATA_WIDTH-1):0] data_o_map,
  	output MemWrite,
+	output MemRead,
 	output [(ADDR_WIDTH-1):0] Result,
 	output [(DATA_WIDTH-1):0] rd2
 	
@@ -11,14 +12,12 @@ module core_risc_v #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32)(
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Declarations for each interconection.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-wire IorD, IRWrite, PCSrc, PCWrite, ALUSrcA, RegWrite, ALU_Out_en, PC_Src, zeroflag, PCen, bbeq, bbne;
-wire [31:0] nxt_PC, PC, ALU_Out, ALU_Result, Instr_out, srcA, srcB, Data_A, to_ALU,Data_out, rd1, Imm, WD3_Out, PCPrev, ImmM4, pc_adder, pc_add_imm;
-wire [4:0]A3_Out;
-wire [1:0]ALUSrcB1, ALUSrcA1, MemToReg;
-wire [3:0]ALUcontrol;
-wire [2:0]Ins_type;
-//assign rst = ~n_rst; ///HABILITAR AL PROGRAMAR Y CAMBIAR EL DEL MAIN
-assign PCen = (zeroflag & bbeq) | (~zeroflag & bbne) | PCWrite;
+wire JumpR,  PCWrite, RegWrite, zeroflag, PCen, bbeq, bbne, branch, srcB, PCSave;
+wire [31:0] ToRegs, nxt_PC, PC, Instr_out, Data_A, Imm, WD3_Out, ImmM4, pc_adder, pc_add_imm, PCadded, Data_B;
+wire [1:0] MemToReg;
+wire [4:0] ALUcontrol;
+wire [2:0] Ins_type;
+assign PCen = (zeroflag & bbeq & branch) | (~zeroflag & bbne & branch) | PCWrite;
 
 ////////////////////////////////////////////////////////
 //PC Register.
@@ -52,6 +51,16 @@ adder PC_add_imm(
 );
 
 ////////////////////////////////////////////////////////
+//PC For JALR type MUX.
+//  OP1: PC=PC_+4.
+//  OP2: PC=rd_+_imm.
+////////////////////////////////////////////////////////
+Mux_2to1 #(.InLength(32))pc_src(
+.A(PCadded), 
+.B(Result),
+.Sel(JumpR), 
+.s(nxt_PC)
+);////////////////////////////////////////////////////////
 //PC intputs Address MUX.
 //  OP1: PC_+4.
 //  OP2: PC_+_imm.
@@ -59,8 +68,19 @@ adder PC_add_imm(
 Mux_2to1 #(.InLength(32))pc_adders(
 .A(pc_adder), 
 .B(pc_add_imm),
-.Sel(PCen), ////PENDIENTE
-.s(nxt_PC)
+.Sel(PCen), 
+.s(PCadded)
+);
+////////////////////////////////////////////////////////
+//PC Save MUX.
+//  OP1: PC_+4.
+//  OP2: PC_+_imm.
+////////////////////////////////////////////////////////
+Mux_2to1 #(.InLength(32))pc_save(
+.A(pc_adder), 
+.B(pc_add_imm),
+.Sel(PCSave), 
+.s(ToRegs)
 );
 ////////////////////////////////////////////////////////
 //R0M Input Address secction
@@ -79,7 +99,7 @@ memory_ROM #(.DATA_WIDTH(32), .ADDR_WIDTH(32)) ROM(
 Mux_4to1 #(.InLength(32))data_pc_rd(
 .A(Result), 
 .B(data_o_map), ///salida del memory map 
-.C(PC),
+.C(ToRegs),
 .D(Imm),
 .Sel(MemToReg),
 .s(WD3_Out)
@@ -112,7 +132,7 @@ imm GenImm(
 Mux_2to1 #(.InLength(32))src_B(
 .A(rd2), 
 .B(Imm),
-.Sel(),  ///selector de la nueva control unit
+.Sel(srcB),  
 .s(Data_B)
 );
 
@@ -136,22 +156,22 @@ ALU ALU_Block(
 //mUX 2:1 FOR DATA OR PC
 ////////////////////////////////////////////////////////
 Control_unit_riscv cu_riscV(
-//inputs
-.clk(clk_O),
-.rst(rst),
-.en(en),
-.mod(Instr_out[30]),
-.opcode(Instr_out[6:0]),
-.funct3(Instr_out[14:12]),
-.funct7(Instr_out[31:25]),
-
-//outputs
-.IorD(IorD), .MemWrite(MemWrite), .IRWrite(IRWrite), .RegWrite(RegWrite), .PCSrc(PCSrc), .PCWrite(PCWrite), .bbeq(bbeq), .bbne(bbne), .ALUOutEn(ALU_Out_en),
-.MemToReg(MemToReg),
-.ALUSrcB1(ALUSrcB1), 
-.ALUSrcA1(ALUSrcA1),
-.ALUcontrol(ALUcontrol),
-.Ins_type(Ins_type)
+	.mod({Instr_out[25],Instr_out[30]}),
+	.opcode(Instr_out[6:0]),
+	.funct3(Instr_out[14:12]),
+	.Jump(PCWrite), 
+	.JumpR(JumpR), 
+	.MemRead(MemRead), 
+	.MemWrite(MemWrite), 
+	.ALUsrc(srcB), 
+	.RegWrite(RegWrite), 
+	.PCSave(PCSave),
+	.MemToReg(MemToReg),
+	.ALUcontrol(ALUcontrol),
+	.Branch(branch), 
+	.BNEinst(bbne), 
+	.BEQinst(bbeq),
+	.InstType(Ins_type)
 );
 
 endmodule

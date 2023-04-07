@@ -6,17 +6,11 @@
 // Module description: 
 // This module ALU is capable of proccess 10 logic and arithmetic functions as 
 // follows:
-//	  4'b0000:Result= suma = A+B;    
-//	  4'b1000:Result= resta = A-B;   
-//	  4'b0111:Result= Land = A&B;  
-//	  4'b0110:Result= Lor = A|B;   
-//	  4'b0100:Result= Sleft = UnnA<<UnnB;  
-//	  4'b0001:Result= Sright = UnnA>>UnnB; 
-//	  4'b0101:Result= SrightU = A>>>B; 
-//	  4'b1101:Result= Lxor = A^B; 
-//	  4'b0010:Result= SetLess = (A<B)?1:0; 
-//	  4'b0011:Result= SetLessU = (UnnA<UnnB)?1:0; 
-//	  4'b1100:Result= A*B;
+// Function 010b: Arithmetic signed sum.
+// Function 110b: Arithmetic signed substraction.
+// Function 000b: Logic AND.
+// Function 001b: Logic OR.
+// Function 011b: Shift Right.
 // 
 // This module receives 3 inputs (two operands and one control) and outputs one 
 // Result and two output flags (negative and zero).
@@ -27,48 +21,48 @@ module ALU #(parameter LENGTH = 32)(
 //Inputs
  input signed [LENGTH-1:0] A,
  input signed [LENGTH-1:0] B,
- input [3:0] control,
+ input [4:0] control,
 //Outputs
  output zeroflag,
  output negativeflag,
  output reg signed [LENGTH-1:0] Result
 );
 
-wire [LENGTH-1:0] Suma, Resta,Land,Lor,Lxor,Sleft,Sright,SrightU,SetLess,SetLessU,Multi;
-wire unsigned [LENGTH-1:0] UnnA, UnnB;
+wire [LENGTH-1:0] suma,resta,Land,Lor,Lxor,Sleft,Sright,SrightU,SetLess,SetLessU, Mul;
+wire unsigned [LENGTH-1:0] UA, UB;
 //wire co;
 
-assign UnnA = A;
-assign UnnB = B;
+assign UA = A;
+assign UB = B;
 
 //Set All the ALU logic into wires outside the Always statement.
-assign Suma = A+B;     //Current assignment for sum of two signed numbers (a, b)
-assign Resta = A-B;     //Current assignment for rest of two signed numbers (a, b)
+assign suma = A+B;     //Current assignment for sum of two signed numbers (a, b)
+assign resta = A-B;     //Current assignment for rest of two signed numbers (a, b)
 assign Land = A&B; //Assigment for a logical AND operation of two numbers (a, b)
 assign Lor = A|B;  //Assigment for a logical OR operation of two numbers (a, b)
-assign Sleft = UnnA<<UnnB; //Assigment logic for shift rigth of data (a) according with (B) data
-assign Sright = UnnA>>UnnB;
-assign SrightU = A>>>B;
+assign Sleft = A<<({27'b0,UB[4:0]}); //Assigment logic for shift rigth of data (a) according with (B) data
+assign Sright = A>>({27'b0,UB[4:0]});
+assign SrightU = UA>>>({27'b0,UB[4:0]});
 assign Lxor = A^B;
 assign SetLess = (A<B)?1:0;
-assign SetLessU = (UnnA<UnnB)?1:0;
-assign Multi = A*B;
+assign SetLessU = (UA<UB)?1:0;
+assign Mul = A*B;
 
 //Always to Mux the output.
 always @ * begin
    //Case sentence for Muxing the output.
 	case (control)
-	  4'b0000:Result= Suma;
-	  4'b1000:Result= Resta;
-	  4'b0111:Result= Land;
-	  4'b0110:Result= Lor;
-	  4'b0100:Result= Lxor;
-	  4'b0001:Result= Sleft;
-	  4'b0101:Result= Sright;
-	  4'b1101:Result= SrightU;
-	  4'b0010:Result= SetLess;
-	  4'b0011:Result= SetLessU;
-	  4'b1100:Result= Multi;
+	  5'b00000:Result= suma;
+	  5'b01000:Result= resta;
+	  5'b00111:Result= Land; 
+	  5'b00110:Result= Lor;
+	  5'b00100:Result= Lxor;
+	  5'b00001:Result= Sleft;
+	  5'b00101:Result= Sright;
+	  5'b01101:Result= SrightU;
+	  5'b00010:Result= SetLess;
+	  5'b00011:Result= SetLessU;
+	  5'b10000:Result= Mul;	 
 	  default:Result= {LENGTH{1'b0}};
 	endcase
 end

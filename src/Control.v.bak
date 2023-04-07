@@ -1,0 +1,89 @@
+module Control (
+	input op_inst,
+	output 	Branch,
+				MemRead,
+				MemToReg,
+				MemWrite,
+				ALUsrc,
+				RegWrite,
+	output [1:0] ALU_Op
+);
+
+localparam R_Type = 7'h33;
+localparam I_Logic_Type = 7'h13;
+localparam I_Load_Type = 7'h3;
+localparam S_Type = 7'h23;
+localparam B_Type = 7'h63;
+localparam J_Type = 7'h6F;
+localparam I_Jump_Type = 7'h67;
+localparam U_Load_Type = 7'h37;
+localparam U_Add_Type = 7'h17;
+
+always @ * begin
+	case (op_inst)
+		R_Type:
+			ALU_Op = 
+			MemRead =
+			MemToReg =
+			MemWrite =
+			ALUsrc =
+			RegWrite =
+		I_Logic_Type:
+			ALU_Op = 
+			MemRead =
+			MemToReg =
+			MemWrite =
+			ALUsrc =
+			RegWrite =
+		I_Load_Type:
+			ALU_Op = 
+			MemRead =
+			MemToReg =
+			MemWrite =
+			ALUsrc =
+			RegWrite =
+		S_Type:
+			ALU_Op = 
+			MemRead =
+			MemToReg =
+			MemWrite =
+			ALUsrc =
+			RegWrite =
+		B_Type:
+			ALU_Op = 
+			MemRead =
+			MemToReg =
+			MemWrite =
+			ALUsrc =
+			RegWrite =
+		J_Type:
+			ALU_Op = 
+			MemRead =
+			MemToReg =
+			MemWrite =
+			ALUsrc =
+			RegWrite =
+		I_Jump_Type:
+			ALU_Op = 
+			MemRead =
+			MemToReg =
+			MemWrite =
+			ALUsrc =
+			RegWrite =
+		U_Load_Type:
+			ALU_Op = 
+			MemRead =
+			MemToReg =
+			MemWrite =
+			ALUsrc =
+			RegWrite =
+		U_Add_Type:
+			ALU_Op = 
+			MemRead =
+			MemToReg =
+			MemWrite =
+			ALUsrc =
+			RegWrite =
+end
+
+endmodule

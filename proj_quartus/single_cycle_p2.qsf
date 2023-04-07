@@ -54,29 +54,29 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name VERILOG_FILE ../src/single_cycle_p2.v
-set_global_assignment -name VERILOG_FILE ../src/core_risc_v.v
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE ../src/UART_Full_Duplex/UART_TX.v
+set_global_assignment -name VERILOG_FILE ../src/UART_Full_Duplex/UART_RX.v
+set_global_assignment -name VERILOG_FILE ../src/UART_Full_Duplex/TXshift_register.v
+set_global_assignment -name VERILOG_FILE ../src/UART_Full_Duplex/shift_register.v
+set_global_assignment -name VERILOG_FILE ../src/UART_Full_Duplex/RXshift_register.v
+set_global_assignment -name VERILOG_FILE ../src/UART_Full_Duplex/FSM_UART_tx.v
+set_global_assignment -name VERILOG_FILE ../src/UART_Full_Duplex/FSM_UART_rx.v
+set_global_assignment -name VERILOG_FILE ../src/UART_Full_Duplex/FF_D_enable.v
+set_global_assignment -name VERILOG_FILE ../src/UART_Full_Duplex/FF_D_2enable.v
+set_global_assignment -name VERILOG_FILE ../src/UART_Full_Duplex/Counter_Param.v
+set_global_assignment -name VERILOG_FILE ../src/UART_Full_Duplex/Bit_Rate_Pulse.v
+set_global_assignment -name VERILOG_FILE ../src/UART.v
+set_global_assignment -name VERILOG_FILE ../src/MemController.v
+set_global_assignment -name VERILOG_FILE ../src/single_cycle_p2.v
+set_global_assignment -name VERILOG_FILE ../src/core_risc_v.v
 set_global_assignment -name VERILOG_FILE ../src/ALU/ALU.v
-set_global_assignment -name VERILOG_FILE ../src/uart/UART_TX.v
-set_global_assignment -name VERILOG_FILE ../src/uart/uart_shif_reg.v
-set_global_assignment -name VERILOG_FILE ../src/uart/UART_RX.v
-set_global_assignment -name VERILOG_FILE ../src/uart/uart_in_out.v
-set_global_assignment -name VERILOG_FILE ../src/uart/Shift_Register_R_Param.v
-set_global_assignment -name VERILOG_FILE ../src/uart/shift_register.v
-set_global_assignment -name VERILOG_FILE ../src/uart/Reg_Param.v
-set_global_assignment -name VERILOG_FILE ../src/uart/Heard_Bit.v
-set_global_assignment -name VERILOG_FILE ../src/uart/FSM_UART_tx.v
-set_global_assignment -name VERILOG_FILE ../src/uart/FSM_UART_Rx.v
-set_global_assignment -name VERILOG_FILE ../src/uart/FF_D_enable.v
-set_global_assignment -name VERILOG_FILE ../src/uart/FF_D_2enable.v
-set_global_assignment -name VERILOG_FILE ../src/uart/decoder_bin_hex_7seg.v
-set_global_assignment -name VERILOG_FILE ../src/uart/Counter_Param.v
-set_global_assignment -name VERILOG_FILE ../src/uart/Bit_Rate_Pulse.v
 set_global_assignment -name VERILOG_FILE ../src/Single_port_ROM/single_port_rom.v
 set_global_assignment -name VERILOG_FILE ../src/Single_port_RAM/single_port_ram.v
-set_global_assignment -name VERILOG_FILE ../src/Single_port_RAM/Memory_map.v
 set_global_assignment -name VERILOG_FILE ../src/Single_port_RAM/GPIO_in_out.v
 set_global_assignment -name VERILOG_FILE ../src/SignExtend/imm.v
 set_global_assignment -name VERILOG_FILE ../src/RegisterFile/WriteControl.v
@@ -86,13 +86,18 @@ set_global_assignment -name VERILOG_FILE ../src/RegisterFile/Register.v
 set_global_assignment -name VERILOG_FILE ../src/RegisterFile/MUX32input.v
 set_global_assignment -name VERILOG_FILE ../src/Muxs/Mux_4to1.v
 set_global_assignment -name VERILOG_FILE ../src/Muxs/Mux_2to1.v
-set_global_assignment -name VERILOG_FILE ../src/FSM/riscv_FSM.v
 set_global_assignment -name VERILOG_FILE ../src/FSM/Control_unit_riscv.v
 set_global_assignment -name VERILOG_FILE ../src/FSM/Control_Unit.v
 set_global_assignment -name VERILOG_FILE ../src/FSM/ALU_decoder.v
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VERILOG_FILE ../src/ALU/adder.v
 set_global_assignment -name VERILOG_FILE ../src/Single_port_ROM/memory_ROM.v
+set_global_assignment -name VERILOG_FILE ../src/Control.v
+set_global_assignment -name VERILOG_FILE ../src/MUXNInput.v
+set_global_assignment -name VERILOG_FILE ../src/RISCV_tb.v
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH RISCV_tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME RISCV_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id RISCV_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME RISCV_tb -section_id RISCV_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE ../src/RISCV_tb.v -section_id RISCV_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

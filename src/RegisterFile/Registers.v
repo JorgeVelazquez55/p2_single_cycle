@@ -1,11 +1,3 @@
-//////////////////////////////////////////////////////////////////////////////////
-// Company: ITESO
-// Engineer:  Edgar Barba & Jorge Velazquez
-// Module: Registers
-// Desciption: 
-// This module contains all the 32 Register used in the REgister File Module.
-//
-//////////////////////////////////////////////////////////////////////////////////
 module Registers #(parameter DATA_WIDTH=32, parameter ADDR_WIDTH=5)(
  input [(DATA_WIDTH-1):0] D,
  input clk,
@@ -76,10 +68,9 @@ module Registers #(parameter DATA_WIDTH=32, parameter ADDR_WIDTH=5)(
  output [(DATA_WIDTH-1):0] Q31
 );
 
-wire enable [DATA_WIDTH-1:0]; //Declare enough enable signlas.
-wire [DATA_WIDTH-1:0] Qout [DATA_WIDTH-1:0]; //Declare enough Output signals.
+wire enable [DATA_WIDTH-1:0];
+wire [DATA_WIDTH-1:0] Qout [DATA_WIDTH-1:0];
 
-//Assign each input enable signal to its wire.
 assign enable[0] = en0;
 assign enable[1] = en1;
 assign enable[2] = en2;
@@ -113,7 +104,6 @@ assign enable[29] = en29;
 assign enable[30] = en30;
 assign enable[31] = en31;
 
-//Assing each output signal with its wire.
 assign Q0 = Qout[0];
 assign Q1 = Qout[1];
 assign Q2 = Qout[2];
@@ -147,19 +137,35 @@ assign Q29 = Qout[29];
 assign Q30 = Qout[30];
 assign Q31 = Qout[31];
 
-//Generate for the 32 Registers.
 genvar i;
 generate
-  for (i=0;i<2**ADDR_WIDTH;i=i+1) begin: R
-    Register R (
-	 .D(D),
-	 .dafault_D(32'h0000_0000),
-	 .rst(rst),
-	 .en(enable[i]),
-	 .clk(clk),
-	 .Q(Qout[i])
-	 );
-  end
+	for (i=0;i<2;i=i+1) begin: R0_1
+		Register R (
+			.D(D),
+			.dafault_D(32'h0000_0000),
+			.rst(rst),
+			.en(enable[i]),
+			.clk(clk),
+			.Q(Qout[i])
+		);
+	end
+	for (i=3;i<32;i=i+1) begin: R3_31
+		Register R (
+			.D(D),
+			.dafault_D(32'h0000_0000),
+			.rst(rst),
+			.en(enable[i]),
+			.clk(clk),
+			.Q(Qout[i])
+		);
+	end
 endgenerate
-
+Register SP (
+			.D(D),
+			.dafault_D(32'h7FFF_EFFC), //0x7fffeffc
+			.rst(rst),
+			.en(enable[2]),
+			.clk(clk),
+			.Q(Qout[2])
+		);
 endmodule

@@ -1,0 +1,57 @@
+`timescale 1ns / 1ps
+module risc_v_uart_p1_tb;
+wire tx_uart;
+reg clk, rst;
+reg rx_line_uart;
+
+ 
+
+risc_v_uart_p1 UUT(
+.clk(clk),
+.rst(rst),
+.rx_line_uart(rx_line_uart),
+.tx_line_uart(tx_uart)
+// .en(en),
+// .gpio_in(GPIOin),
+// .gpio_out(GPIOout),
+// .clk_1h(clk_1h)
+);
+
+ 
+
+initial 
+    begin
+    clk = 1'b0;
+    rst = 1'b1;
+    rx_line_uart = 1'b1;
+//    en = 1'b0;
+#2 rst = 1'b0;
+#1000 rx_line_uart = 1'b0;
+#105180 rx_line_uart = 1'b1;
+#105180 rx_line_uart = 1'b0;
+#105180 rx_line_uart = 1'b1;
+#105180 rx_line_uart = 1'b0;
+#631081 rx_line_uart = 1'b1;
+
+ 
+
+
+#5001500 rx_line_uart = 1'b0;
+#105180 rx_line_uart = 1'b1;
+#105180 rx_line_uart = 1'b0;
+#105180 rx_line_uart = 1'b1;
+#105180 rx_line_uart = 1'b0;
+#631081 rx_line_uart = 1'b1;
+
+ 
+
+//    en = 1'b1;
+
+ 
+
+    end
+always // Clock generator
+  begin
+    #10 clk = ~clk;
+  end
+endmodule

@@ -14,11 +14,11 @@ module single_port_ram
 #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 32)
 (	input [(DATA_WIDTH-1):0] data,
 	input [(ADDR_WIDTH-1):0] addr,
-	input we, clk,
+	input we, re, clk,
 	output [(DATA_WIDTH-1):0] q );
 
 // Declare the RAM array
-reg [DATA_WIDTH-1:0] ram[99:0];
+reg [DATA_WIDTH-1:0] ram[63:0];
 wire [(ADDR_WIDTH-3):0] CurrAddr;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -31,6 +31,6 @@ always @ (posedge clk)
 			ram[CurrAddr] <= data;
 	end
 // Reading continuously
-assign q = ram[CurrAddr];
+assign q = (re)?ram[CurrAddr]:32'b0;
 
 endmodule

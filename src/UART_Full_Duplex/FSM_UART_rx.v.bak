@@ -1,0 +1,144 @@
+`timescale 1ns / 1ps
+
+module FSM_UART_rx(
+	input rx
+	input clk,
+	input rst,
+	input end_bit_time_t, //Bit rate flag
+	input [3:0] Tx_bit_Count, //Count to 9 for 8bits data and 1 parity bit
+	output reg bit_counter_en_tx, //enable for counter
+	output reg bit_enable_start, //enable to load data to register
+	output reg bit_shift_en_tx, //
+	output reg bit_WAIT_RX, //enable to bit rate.
+	output reg rst_WAIT_RX, //rst for bit rate (idle TX line)
+	output reg rst_bit_counter_tx, //rst for counter bits.
+	output reg finish,
+	output reg busy
+);
+
+//localparam to define every state 	in gray code 
+localparam INI_R		= 3'b000;
+localparam START_R	= 3'b001;
+localparam WAIT_RX	= 3'b010;
+localparam RESET_TIM	= 3'b011;
+localparam RX_BITS	= 3'b100;
+localparam STOP		= 3'b101;
+
+
+reg [2:0] Rx_state;
+reg samp;
+
+//procedural blocks to define the road for every state, Rx_state is updated once the state is present.
+
+always @(posedge rst, posedge clk)
+	begin
+		if (rst) 
+			Rx_state<= INI_R;
+			samp <= 1'b1;
+		else 
+		case (Rx_state)
+				INI_R: 		
+					if (rx==0)
+						Rx_state <= START_R;
+				START_R:		Rx_state <= WAIT_RX1;
+				RX_BITS:	
+					if (Tx_bit_Count == 4'b1010)
+						Rx_state <= STOP;
+					else
+						Rx_state <= WAIT_RX;
+				WAIT_RX:	
+					if (end_bit_time_t)	
+						if (samp == 4'b1)
+							Rx_state <= RX_BITS;
+							samp <= 1'b0;
+						else 
+							Rx_state <= RESET_TIM;
+							samp <= 1'b1;
+					else
+						Rx_state <= WAIT_RX;
+				RESET_TIM:
+						Rx_state <= WAIT_RX;					
+				STOP:		
+					Rx_state <= INI_R;
+				default:		
+					Rx_state <= INI_R;
+		endcase
+	end
+// OUTPUT DEFINITION
+//procedural blocks to define which variables are changing according with the present state, Rx_state define that chenge.
+always @(Rx_state)
+	begin
+				case(Rx_state)
+				INI_R: 	
+					begin
+						bit_counter_en_rx = 1'b0;
+						rst_bit_counter_rx = 1'b0;
+						bit_shift_en_rx = 1'b0;
+						bit_WAIT_RX = 1'b0;
+						rst_WAIT_RX = 1'b0;
+		            busy = 1'b0;				
+						finish = 1'b0;
+					end
+				START_R: 	
+					begin
+						bit_counter_en_rx = 1'b0;
+						rst_bit_counter_rx = 1'b1;
+						bit_shift_en_rx = 1'b0;
+						bit_WAIT_RX = 1'b0;
+						rst_WAIT_RX = 1'b1;
+		            busy = 1'b1;				
+						finish = 1'b0;
+					end
+				RX_BITS: 	
+					begin
+						bit_counter_en_rx = 1'b1;
+						rst_bit_counter_rx = 1'b0;
+						bit_shift_en_rx = 1'b1;
+						bit_WAIT_RX = 1'b0;
+						rst_WAIT_RX = 1'b1;
+		            busy = 1'b1;				
+						finish = 1'b0;		
+					end
+				WAIT_RX:
+					begin
+						bit_counter_en_rx = 1'b0;
+						rst_bit_counter_rx = 1'b0;
+						bit_shift_en_rx = 1'b0;
+						bit_WAIT_RX = 1'b1;
+						rst_WAIT_RX = 1'b0;
+		            busy = 1'b1;				
+						finish = 1'b0;		
+					end
+				RESET_TIM:
+						bit_counter_en_rx = 1'b0;
+						rst_bit_counter_rx = 1'b0;
+						bit_shift_en_rx = 1'b0;
+						bit_WAIT_RX = 1'b0;
+						rst_WAIT_RX = 1'b1;
+		            busy = 1'b1;				
+						finish = 1'b0;	
+				STOP: 	
+					begin
+						bit_counter_en_rx = 1'b0;
+						rst_bit_counter_rx = 1'b1;
+						bit_shift_en_rx = 1'b0;
+						bit_WAIT_RX = 1'b0;
+						rst_WAIT_RX = 1'b1;
+		            busy = 1'b0;				
+						finish = 1'b1;		
+					end						
+				default:
+					begin
+						bit_counter_en_tx = 1'b0;
+						bit_enable_start = 1'b0;
+						bit_shift_en_tx = 1'b0;
+						bit_WAIT_RX = 1'b0;
+						rst_WAIT_RX = 1'b0;
+						rst_bit_counter_tx = 1'b0;
+						wb = 1'b0;		
+		            busy = 1'b0;				
+						finish = 1'b0;			
+					end
+			endcase
+	end
+endmodule

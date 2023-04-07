@@ -6,11 +6,6 @@ module adder #(parameter LENGTH = 32)(
 );
 
 wire [LENGTH-1:0] Suma;
-wire unsigned [LENGTH-1:0] UnnA, UnnB;
-//wire co;
-
-assign UnnA = A;
-assign UnnB = B;
 
 //Set All the ALU logic into wires outside the Always statement.
 assign Suma = A+B;     //Current assignment for sum of two signed numbers (a, b)
