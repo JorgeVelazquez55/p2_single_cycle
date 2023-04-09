@@ -8,10 +8,8 @@ reg [31:0] addr_pros;
 
 always @ *
 begin
-	if(addr_pc >= 32'h00400000)   ///Location of memory program
-		addr_pros = addr_pc - 32'h00400000;
-	else
-		addr_pros = addr_pc - 32'h00000000;
+	//addr_pros = addr_pc - 32'h00400000;
+	addr_pros = {12'b0, addr_pc[19:0]};
 end
 
 single_port_rom #(.DATA_WIDTH(32), .ADDR_WIDTH(32))ROM_32bitD_programMemory

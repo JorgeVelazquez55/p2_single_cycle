@@ -13,6 +13,14 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
 !s11f vlog 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -22,28 +30,28 @@ R0
 cModel Technology
 Z1 dE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/DM_Barba_Flores_RISC_V/Simulation
 T_opt
-!s110 1680835912
-ViZ;K[KiS91fZ?A4gYahWI0
+!s110 1680905275
+V22VKXII;4A7FcgaU[Y4Xk1
 Z2 04 8 4 work RISCV_tb fast 0
-=1-18c04d31410d-642f8548-2a9-48e0
+=1-18c04d31410d-6430943b-190-4aa0
 Z3 !s124 OEM10U95 
 o-quiet -auto_acc_if_foreign -work work
 Z4 tCvgOpt 0
 n@_opt
 Z5 OL;O;2021.2;73
+R1
 T_opt1
-!s110 1680835719
-V@FIfIN5:A2fLP>inEKboS1
+!s110 1680907578
+V;O6aQUJ2loSeMj?mXTBQd2
 R2
-=31-18c04d31410d-642f8487-229-5c0
+=10-18c04d31410d-64309d3a-227-4878
 R3
 o-quiet -auto_acc_if_foreign -work work +acc
 R4
 n@_opt1
 R5
-R1
 vadder
-Z6 !s110 1680835704
+Z6 !s110 1680907561
 !i10b 1
 !s100 Y_Z^Aem^a<QY2n9PPEMV=1
 IRhAKz^VXzH^:I_72L3?UO3
@@ -51,14 +59,14 @@ Z7 dE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cy
 w1680826001
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU/adder.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU/adder.v
-!i122 392
+!i122 905
 Z8 L0 1 19
 Z9 VDg1SIo80bB@j0V0VzS_@n1
 Z10 OL;L;2021.2;73
 r1
 !s85 0
 31
-Z11 !s108 1680835704.000000
+Z11 !s108 1680907560.000000
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU/adder.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU/adder.v|
 !i113 0
@@ -73,14 +81,14 @@ R7
 w1680826509
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU/ALU.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU/ALU.v
-!i122 393
+!i122 906
 L0 20 53
 R9
 R10
 r1
 !s85 0
 31
-R11
+Z13 !s108 1680907561.000000
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU/ALU.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU/ALU.v|
 !i113 0
@@ -88,7 +96,7 @@ R12
 R4
 n@a@l@u
 vALU_decoder
-Z13 !s110 1680835703
+Z14 !s110 1680907560
 !i10b 1
 !s100 @>>IC2OZlA;EDQ_JS@d=@3
 I@5=jmJmd?ni6Ak`V07ld_2
@@ -96,14 +104,14 @@ R7
 w1680814958
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM/ALU_decoder.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM/ALU_decoder.v
-!i122 388
+!i122 901
 L0 3 19
 R9
 R10
 r1
 !s85 0
 31
-Z14 !s108 1680835703.000000
+R11
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM/ALU_decoder.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM/ALU_decoder.v|
 !i113 0
@@ -111,7 +119,7 @@ R12
 R4
 n@a@l@u_decoder
 vBit_Rate_Pulse
-Z15 !s110 1680835701
+Z15 !s110 1680907558
 !i10b 1
 !s100 DYUQlA[=k;AQXWgD>KL^;2
 I[[jC494QXhSI4=O;UnMIZ1
@@ -119,14 +127,14 @@ R7
 w1679210484
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/Bit_Rate_Pulse.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/Bit_Rate_Pulse.v
-!i122 366
+!i122 879
 L0 7 27
 R9
 R10
 r1
 !s85 0
 31
-Z16 !s108 1680835701.000000
+Z16 !s108 1680907558.000000
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/Bit_Rate_Pulse.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/Bit_Rate_Pulse.v|
 !i113 0
@@ -134,7 +142,7 @@ R12
 R4
 n@bit_@rate_@pulse
 vControl
-Z17 !s110 1680835700
+Z17 !s110 1680907557
 !i10b 1
 !s100 d3ZVc;`?7]Gl9HSNMzfVN3
 IXeF@ooIKfR3>g66d1OiF=1
@@ -142,14 +150,14 @@ R7
 w1680834303
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Control.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Control.v
-!i122 359
+!i122 872
 Z18 L0 1 171
 R9
 R10
 r1
 !s85 0
 31
-Z19 !s108 1680835700.000000
+Z19 !s108 1680907557.000000
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Control.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Control.v|
 !i113 0
@@ -157,7 +165,7 @@ R12
 R4
 n@control
 vControl_Unit
-R6
+R14
 !i10b 1
 !s100 9>GDd1i>4b>EVBKMZPUQA2
 IJWhCeR0V@moN2PkY?K5cH2
@@ -165,7 +173,7 @@ R7
 Z20 w1680806406
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM/Control_Unit.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM/Control_Unit.v
-!i122 389
+!i122 902
 L0 12 52
 R9
 R10
@@ -180,7 +188,7 @@ R12
 R4
 n@control_@unit
 vControl_unit_riscv
-R6
+R14
 !i10b 1
 !s100 1gXVMY>fTM8<B0k_B24;b0
 IP0n?Zbdl`7759gSB3YU^e1
@@ -188,7 +196,7 @@ R7
 w1680826611
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM/Control_unit_riscv.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM/Control_unit_riscv.v
-!i122 390
+!i122 903
 L0 4 50
 R9
 R10
@@ -211,7 +219,7 @@ R7
 w1680826610
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/core_risc_v.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/core_risc_v.v
-!i122 360
+!i122 873
 L0 1 177
 R9
 R10
@@ -233,7 +241,7 @@ R7
 w1679254773
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/Counter_Param.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/Counter_Param.v
-!i122 367
+!i122 880
 L0 6 23
 R9
 R10
@@ -256,7 +264,7 @@ R7
 w1666748355
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FF_D_2enable.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FF_D_2enable.v
-!i122 368
+!i122 881
 L0 6 22
 R9
 R10
@@ -279,7 +287,7 @@ R7
 w1633057672
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FF_D_enable.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FF_D_enable.v
-!i122 369
+!i122 882
 L0 6 18
 R9
 R10
@@ -294,7 +302,7 @@ R12
 R4
 n@f@f_@d_enable
 vFSM_UART_rx
-Z21 !s110 1680835702
+R15
 !i10b 1
 !s100 KMFTY54>Q29<A::5ciNEN3
 I?8<bc3WhN4o79`Q<3@DKD3
@@ -302,7 +310,7 @@ R7
 w1679265900
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FSM_UART_rx.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FSM_UART_rx.v
-!i122 370
+!i122 883
 L0 3 159
 R9
 R10
@@ -317,7 +325,7 @@ R12
 R4
 n@f@s@m_@u@a@r@t_rx
 vFSM_UART_tx
-R21
+R15
 !i10b 1
 !s100 >jUzzWHd2UfW^2Q;hDnn;2
 IkB`b^^YVe3ljI=PE:1FKQ2
@@ -325,14 +333,14 @@ R7
 w1679195217
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FSM_UART_tx.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FSM_UART_tx.v
-!i122 371
+!i122 884
 L0 7 130
 R9
 R10
 r1
 !s85 0
 31
-Z22 !s108 1680835702.000000
+R16
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FSM_UART_tx.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FSM_UART_tx.v|
 !i113 0
@@ -348,14 +356,14 @@ R7
 R20
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM/GPIO_in_out.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM/GPIO_in_out.v
-!i122 394
+!i122 907
 L0 1 30
 R9
 R10
 r1
 !s85 0
 31
-R11
+R13
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM/GPIO_in_out.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM/GPIO_in_out.v|
 !i113 0
@@ -363,7 +371,7 @@ R12
 R4
 n@g@p@i@o_in_out
 vimm
-R13
+Z21 !s110 1680907559
 !i10b 1
 !s100 6oN;XkH?:6AA?k_NGOc@]0
 IMZ]I:jdNI:RK[kM<c;ej>2
@@ -371,21 +379,21 @@ R7
 w1680815011
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/SignExtend/imm.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/SignExtend/imm.v
-!i122 380
+!i122 893
 L0 8 29
 R9
 R10
 r1
 !s85 0
 31
-R14
+Z22 !s108 1680907559.000000
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/SignExtend/imm.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/SignExtend/imm.v|
 !i113 0
 R12
 R4
 vMemController
-R15
+R17
 !i10b 1
 !s100 BUdA1SUl[U2hEfo[Wz]1J0
 I;e3[X6Z;2gU9PcI^Dii;K0
@@ -393,14 +401,14 @@ R7
 w1679267434
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/MemController.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/MemController.v
-!i122 361
+!i122 874
 Z23 L0 1 56
 R9
 R10
 r1
 !s85 0
 31
-R16
+R19
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/MemController.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/MemController.v|
 !i113 0
@@ -410,14 +418,14 @@ n@mem@controller
 vmemory_ROM
 R21
 !i10b 1
-!s100 ccWJOWVz^7Xcelk=:0EhM3
-IzR;Vnf;Ua_9;Q6LfI@9JI1
+!s100 cCzU_[cbgCcW^klG7`X[D0
+I3cZ9Ikaag7hUPLKflW^o=0
 R7
-R20
+w1680847015
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_ROM/memory_ROM.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_ROM/memory_ROM.v
-!i122 377
-L0 1 22
+!i122 890
+L0 1 20
 R9
 R10
 r1
@@ -431,7 +439,7 @@ R12
 R4
 nmemory_@r@o@m
 vMUX32input
-R13
+R21
 !i10b 1
 !s100 3VTMNA>m@R_AB_WFnaeK_2
 INCV1AjPhnB;2NWV7RToXT3
@@ -439,14 +447,14 @@ R7
 R20
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/MUX32input.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/MUX32input.v
-!i122 381
+!i122 894
 L0 11 77
 R9
 R10
 r1
 !s85 0
 31
-R14
+R22
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/MUX32input.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/MUX32input.v|
 !i113 0
@@ -454,7 +462,7 @@ R12
 R4
 n@m@u@x32input
 vMux_2to1
-R13
+R14
 !i10b 1
 !s100 WniYLg^HjjHfLIjnJ0kFB2
 IWM?gYXZF^F4a<9Qga?Lj^3
@@ -462,14 +470,14 @@ R7
 R20
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Muxs/Mux_2to1.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Muxs/Mux_2to1.v
-!i122 386
+!i122 899
 L0 11 9
 R9
 R10
 r1
 !s85 0
 31
-R14
+R11
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Muxs/Mux_2to1.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Muxs/Mux_2to1.v|
 !i113 0
@@ -477,7 +485,7 @@ R12
 R4
 n@mux_2to1
 vMux_4to1
-R13
+R14
 !i10b 1
 !s100 S?im9WAQd?2_C`JEHYGm40
 ISL8Ej6]Q2ELYA=V[2c[V62
@@ -485,14 +493,14 @@ R7
 R20
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Muxs/Mux_4to1.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Muxs/Mux_4to1.v
-!i122 387
+!i122 900
 L0 15 16
 R9
 R10
 r1
 !s85 0
 31
-R14
+R11
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Muxs/Mux_4to1.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Muxs/Mux_4to1.v|
 !i113 0
@@ -500,7 +508,7 @@ R12
 R4
 n@mux_4to1
 vMUXNInput
-R15
+R17
 !i10b 1
 !s100 2UdC1C1mKY2c```U^N3Ei0
 INC9nCB1KCMlG7Y0D8z<f63
@@ -508,22 +516,68 @@ R7
 w1680825122
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/MUXNInput.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/MUXNInput.v
-!i122 362
+!i122 875
 R8
 R9
 R10
 r1
 !s85 0
 31
-R16
+R19
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/MUXNInput.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/MUXNInput.v|
 !i113 0
 R12
 R4
 n@m@u@x@n@input
+vpll40MHz
+!s110 1680903892
+!i10b 1
+!s100 7Tl?JWA0:`8i0MhNVKN7Q3
+I5G`FANQ>QG75?c1_C1Bjm0
+R7
+w1680899122
+8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/pll40MHz_sim/pll40MHz.vo
+FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/pll40MHz_sim/pll40MHz.vo
+!i122 618
+L0 32 264
+R9
+R10
+r1
+!s85 0
+31
+!s108 1680903892.000000
+!s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/pll40MHz_sim/pll40MHz.vo|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/pll40MHz_sim/pll40MHz.vo|
+!i113 0
+R12
+R4
+npll40@m@hz
+vpll40MHz_0002
+!s110 1680903643
+!i10b 1
+!s100 fDlYEdFh@?CFS@iJ0^3>b0
+IAcfhXjjVZD0<<VJ@?z;U;2
+R7
+w1680899172
+8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/pll40MHz/pll40MHz_0002.v
+FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/pll40MHz/pll40MHz_0002.v
+!i122 543
+L0 2 85
+R9
+R10
+r1
+!s85 0
+31
+!s108 1680903643.000000
+!s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/pll40MHz/pll40MHz_0002.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/pll40MHz/pll40MHz_0002.v|
+!i113 0
+R12
+R4
+npll40@m@hz_0002
 vRegister
-R13
+R21
 !i10b 1
 !s100 ZIU7Ea0@K;c9UoVQg4>Q;1
 IBXel7z]NNVeD2j7G_kZa^2
@@ -531,14 +585,14 @@ R7
 R20
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/Register.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/Register.v
-!i122 382
+!i122 895
 L0 10 19
 R9
 R10
 r1
 !s85 0
 31
-R14
+R22
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/Register.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/Register.v|
 !i113 0
@@ -546,7 +600,7 @@ R12
 R4
 n@register
 vRegisterFile
-R13
+R21
 !i10b 1
 !s100 W[c3]Q21GGQAf`nGl7aBT1
 I36DaS_MiX;M7PA:K@I??>1
@@ -554,14 +608,14 @@ R7
 w1680835673
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/RegisterFile.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/RegisterFile.v
-!i122 383
+!i122 896
 L0 9 202
 R9
 R10
 r1
 !s85 0
 31
-R14
+R22
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/RegisterFile.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/RegisterFile.v|
 !i113 0
@@ -569,7 +623,7 @@ R12
 R4
 n@register@file
 vRegisters
-R13
+R14
 !i10b 1
 !s100 STQPe8@I2dUg^a2hZ=3mk2
 Ij9Wi94hc[CjPXJ0AE@ZfP1
@@ -577,14 +631,14 @@ R7
 w1680826751
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/Registers.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/Registers.v
-!i122 384
+!i122 897
 R18
 R9
 R10
 r1
 !s85 0
 31
-R14
+R11
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/Registers.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/Registers.v|
 !i113 0
@@ -592,7 +646,7 @@ R12
 R4
 n@registers
 vriscv_FSM
-R6
+R14
 !i10b 1
 !s100 2PR6bK2i2JDK[XA2eJ<Sc3
 I?@X?=nzG>H9VhRNbida]z1
@@ -600,7 +654,7 @@ R7
 R20
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM/riscv_FSM.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM/riscv_FSM.v
-!i122 391
+!i122 904
 L0 2 364
 R9
 R10
@@ -615,22 +669,22 @@ R12
 R4
 nriscv_@f@s@m
 vRISCV_tb
-R15
+R17
 !i10b 1
-!s100 Y:E21?:^3aO=OKLE31amb1
-IQWKiE[ZM92_[Lhi624_kH3
+!s100 EA6:g@UNQU5[8zN65Zoao1
+IM[ec7?KL2I?o7bJ<Llo_L1
 R7
-w1680832859
+w1680907553
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RISCV_tb.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RISCV_tb.v
-!i122 363
+!i122 876
 L0 2 58
 R9
 R10
 r1
 !s85 0
 31
-R16
+R19
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RISCV_tb.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RISCV_tb.v|
 !i113 0
@@ -638,7 +692,7 @@ R12
 R4
 n@r@i@s@c@v_tb
 vRXshift_register
-R21
+R15
 !i10b 1
 !s100 JhX32:<I_j3@Khe:7ZHaC3
 IQ[>6L7Nz;OZb8zIA@HZK21
@@ -646,14 +700,14 @@ R7
 w1679256311
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/RXshift_register.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/RXshift_register.v
-!i122 372
+!i122 885
 L0 1 26
 R9
 R10
 r1
 !s85 0
 31
-R22
+R16
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/RXshift_register.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/RXshift_register.v|
 !i113 0
@@ -661,7 +715,7 @@ R12
 R4
 n@r@xshift_register
 vshift_register
-R21
+R15
 !i10b 1
 !s100 C37OnR1MNcU=e^i7mFmbi1
 IGAVLL]zJSi97XdmPGPPZN0
@@ -669,43 +723,43 @@ R7
 w1669775940
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/shift_register.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/shift_register.v
-!i122 373
+!i122 886
 Z24 L0 1 29
 R9
 R10
 r1
 !s85 0
 31
-R22
+R16
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/shift_register.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/shift_register.v|
 !i113 0
 R12
 R4
 vsingle_cycle_p2
-R15
+R17
 !i10b 1
-!s100 ]Va1MUQ6_mmbfE6eIQaZ[2
-Ig6Bn5`@:9mhUIZ>IiQSzX1
+!s100 S1kXWFV88kK^LgaoV@B>Z3
+IED[=ALEC=T0hL[H^Yjk_D0
 R7
-w1680830516
+w1680906957
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/single_cycle_p2.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/single_cycle_p2.v
-!i122 364
-L0 8 91
+!i122 877
+L0 8 92
 R9
 R10
 r1
 !s85 0
 31
-R16
+R19
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/single_cycle_p2.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/single_cycle_p2.v|
 !i113 0
 R12
 R4
 vsingle_port_ram
-R13
+R21
 !i10b 1
 !s100 [l1b@NI84aJ5LX@gOoV1a3
 IRP4jo>oI3KSXN]KiNR5>T2
@@ -713,14 +767,14 @@ R7
 w1680834838
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM/single_port_ram.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM/single_port_ram.v
-!i122 379
+!i122 892
 L0 13 24
 R9
 R10
 r1
 !s85 0
 31
-R14
+R22
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM/single_port_ram.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM/single_port_ram.v|
 !i113 0
@@ -735,7 +789,7 @@ R7
 w1680827431
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_ROM/single_port_rom.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_ROM/single_port_rom.v
-!i122 378
+!i122 891
 L0 3 18
 R9
 R10
@@ -749,7 +803,7 @@ R22
 R12
 R4
 vTXshift_register
-R21
+R15
 !i10b 1
 !s100 ZWmCEL0LznnoZai[OaIS;0
 I1iz_>MkjO4R0TGAfX_zK`1
@@ -757,14 +811,14 @@ R7
 w1679210770
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/TXshift_register.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/TXshift_register.v
-!i122 374
+!i122 887
 R24
 R9
 R10
 r1
 !s85 0
 31
-R22
+R16
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/TXshift_register.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/TXshift_register.v|
 !i113 0
@@ -772,7 +826,7 @@ R12
 R4
 n@t@xshift_register
 vUART
-R15
+R17
 !i10b 1
 !s100 _RN<?3mBO9FK9WKzH6m753
 IA_3V]?>N7z>L[5h67jeQR1
@@ -780,14 +834,14 @@ R7
 w1680825650
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART.v
-!i122 365
+!i122 878
 R23
 R9
 R10
 r1
 !s85 0
 31
-R16
+R19
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART.v|
 !i113 0
@@ -797,13 +851,13 @@ n@u@a@r@t
 vUART_RX
 R21
 !i10b 1
-!s100 ^eaVCSg[R62eIj@R@?DNY0
-ILBbI^Q5B;[oLPK9dE40mk2
+!s100 LEkH0@XfmGCA;=f4o:HXR3
+IdFU]IYR8N:8deEUVO?dW?1
 R7
-w1680832665
+w1680904268
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/UART_RX.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/UART_RX.v
-!i122 375
+!i122 888
 L0 1 51
 R9
 R10
@@ -820,13 +874,13 @@ n@u@a@r@t_@r@x
 vUART_TX
 R21
 !i10b 1
-!s100 Q;FT;g^KAbOiCB7Oob@NQ3
-IZ<e3`e535Ln_MGLc@E_HA1
+!s100 E]TjY@K08ekSz9PncIcTB0
+I=PVU@BAZXOZA282Y_7Gd?2
 R7
-w1680827031
+w1680906343
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/UART_TX.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/UART_TX.v
-!i122 376
+!i122 889
 L0 2 76
 R9
 R10
@@ -841,7 +895,7 @@ R12
 R4
 n@u@a@r@t_@t@x
 vWriteControl
-R13
+R14
 !i10b 1
 !s100 WcKNo<W9enNgONzJdPW6E1
 IVd?Re1b2VR`K]e8Q`RT@52
@@ -849,14 +903,14 @@ R7
 R20
 8E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/WriteControl.v
 FE:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/WriteControl.v
-!i122 385
+!i122 898
 L0 10 73
 R9
 R10
 r1
 !s85 0
 31
-R14
+R11
 !s107 E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/WriteControl.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/WriteControl.v|
 !i113 0

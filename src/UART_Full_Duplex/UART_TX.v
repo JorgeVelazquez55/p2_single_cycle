@@ -22,7 +22,7 @@ wire [3:0]count_bits_t;
 // For a baud rate of 9600 baudios: bit time 104.2 us, half time 52.1 us
 // For a clock frequency of 50 MHz bit time = 5210 T50MHz;
 
-Bit_Rate_Pulse # (.delay_counts(20) ) BR_pulse_tx (//5208
+Bit_Rate_Pulse # (.delay_counts(4167) ) BR_pulse_tx (//5208
 .clk(clk), 
 .rst(rst_wait_tx), 
 .enable(bit_wait_tx), 

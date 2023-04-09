@@ -11,7 +11,7 @@ module UART_RX (
 wire endBit, EnBitCnt, ShiftEn, WaitEn, RstWait, RstBitCnt;
 wire [3:0] BitCnt;
 
-Bit_Rate_Pulse # (.delay_counts(5) ) BR_pulse_rx (//2604
+Bit_Rate_Pulse # (.delay_counts(2083) ) BR_pulse_rx (//2604
 .clk(clk), 
 .rst(RstWait), 
 .enable(WaitEn), 
