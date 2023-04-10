@@ -1,16 +1,16 @@
-Fitter Status : Successful - Sat Apr  8 15:02:57 2023
+Fitter Status : Successful - Mon Apr 10 14:19:59 2023
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : single_cycle_p2
 Top-level Entity Name : single_cycle_p2
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 3,405 / 41,910 ( 8 % )
-Total registers : 7179
+Logic utilization (in ALMs) : 3,898 / 41,910 ( 9 % )
+Total registers : 9326
 Total pins : 4 / 499 ( < 1 % )
 Total virtual pins : 0
-Total block memory bits : 415,744 / 5,662,720 ( 7 % )
-Total RAM Blocks : 41 / 553 ( 7 % )
+Total block memory bits : 679,936 / 5,662,720 ( 12 % )
+Total RAM Blocks : 67 / 553 ( 12 % )
 Total DSP Blocks : 2 / 112 ( 2 % )
 Total HSSI RX PCSs : 0 / 9 ( 0 % )
 Total HSSI PMA RX Deserializers : 0 / 9 ( 0 % )

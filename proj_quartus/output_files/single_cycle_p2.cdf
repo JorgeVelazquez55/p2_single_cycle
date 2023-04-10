@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSXFC6D6F31) Path("E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/DM_Barba_Flores_RISC_V/Project/output_files/") File("RISC_V_Multi_Cycle.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSXFC6D6F31) Path("E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/output_files/") File("single_cycle_p2.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

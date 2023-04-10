@@ -44,7 +44,7 @@ always @(posedge rst, posedge clk)
 				START_R:		
 					Rx_state <= WAIT_RX;
 				RX_BITS:	
-					if (Rx_bit_Count == 4'b1001)
+					if (Rx_bit_Count == 4'b1010)
 						Rx_state <= STOP;
 					else
 						Rx_state <= WAIT_RX;

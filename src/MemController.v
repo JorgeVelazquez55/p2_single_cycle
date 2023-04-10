@@ -32,22 +32,22 @@ begin
 		Sel = 2'd1;
 	end
 	else if(ADDRIn >= 32'h10010024) begin
-		RAMen = 0;
-		GPIOen = 1;
+		RAMen = 1'b0;
+		GPIOen = 1'b1;
 		UARTen = 1'b0;
 		ADDROut = ADDRIn - 32'h10010024;
 		Sel = 2'd2;
 	end
 	else if(ADDRIn >= 32'h00400000) begin
-		RAMen = 0;
-		GPIOen = 0;
+		RAMen = 1'b0;
+		GPIOen = 1'b0;
 		UARTen = 1'b0;
 		ADDROut = ADDRIn - 32'h00400000;
 		Sel = 2'd3;
 	end
 	else begin
-		RAMen = 0;
-		GPIOen = 0;
+		RAMen = 1'b0;
+		GPIOen = 1'b0;
 		UARTen = 1'b0;
 		ADDROut = 32'h0;
 		Sel = 2'd0;

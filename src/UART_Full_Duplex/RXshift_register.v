@@ -8,7 +8,7 @@ module RXshift_register(
 
 wire [10:0] shift_bits;
 assign shift_bits[10] = ser_bit;
-assign Sw = shift_bits[8:1];
+assign Sw = shift_bits[7:0];
 
 genvar gi;
 

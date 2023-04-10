@@ -24,5 +24,7 @@ begin
   else if (en == 1) begin
     Q<=D;
   end
+  else 
+	 Q<=Q;
 end
 endmodule
