@@ -1,6 +1,159 @@
+# Compile of Control.v was successful with warnings.
+# Compile of core_risc_v.v was successful.
+# Compile of MemController.v was successful.
+# Compile of MUXNInput.v was successful.
+# Compile of RISCV_tb.v was successful.
+# Compile of single_cycle_p2.v was successful.
+# Compile of UART.v was successful.
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_register.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of memory_ROM.v was successful.
+# Compile of single_port_rom.v was successful.
+# Compile of GPIO_in_out.v was successful.
+# Compile of Memory_map.v was successful.
+# Compile of single_port_ram.v was successful.
+# Compile of imm.v was successful.
+# Compile of MUX32input.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of Registers.v was successful.
+# Compile of WriteControl.v was successful.
+# Compile of Mux_2to1.v was successful.
+# Compile of Mux_4to1.v was successful.
+# Compile of ALU_decoder.v was successful.
+# Compile of Control_Unit.v was successful.
+# Compile of Control_unit_riscv.v was successful.
+# Compile of riscv_FSM.v was successful.
+# Compile of adder.v was successful.
+# Compile of ALU.v was successful with warnings.
+# 37 compiles, 0 failed with no errors.
+# Load canceled
+vsim work.RISCV_tb
+# vsim work.RISCV_tb 
+# Start time: 22:27:17 on Aug 28,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Error: E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/pll40MHz_sim/pll40MHz.vo(46): Module 'altera_pll' is not defined.
+#  For instance 'pll40mhz_altera_pll_altera_pll_i_639' at path 'RISCV_tb.UUT.clk40MHz'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 22:27:18 on Aug 28,2023, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 13
+# Compile of Control.v was successful with warnings.
+# Compile of core_risc_v.v was successful.
+# Compile of MemController.v was successful.
+# Compile of MUXNInput.v was successful.
+# Compile of RISCV_tb.v was successful.
+# Compile of single_cycle_p2.v was successful.
+# Compile of UART.v was successful.
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_register.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of memory_ROM.v was successful.
+# Compile of single_port_rom.v was successful.
+# Compile of GPIO_in_out.v was successful.
+# Compile of Memory_map.v was successful.
+# Compile of single_port_ram.v was successful.
+# Compile of imm.v was successful.
+# Compile of MUX32input.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of Registers.v was successful.
+# Compile of WriteControl.v was successful.
+# Compile of Mux_2to1.v was successful.
+# Compile of Mux_4to1.v was successful.
+# Compile of ALU_decoder.v was successful.
+# Compile of Control_Unit.v was successful.
+# Compile of Control_unit_riscv.v was successful.
+# Compile of riscv_FSM.v was successful.
+# Compile of adder.v was successful.
+# Compile of ALU.v was successful with warnings.
+# 37 compiles, 0 failed with no errors.
+vsim work.RISCV_tb
+# vsim work.RISCV_tb 
+# Start time: 22:30:55 on Aug 28,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU/ALU.v(32): (vopt-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.RISCV_tb(fast)
+# Causality operation skipped due to absence of debug database file
 vsim -voptargs=+acc work.RISCV_tb
+# End time: 22:34:14 on Aug 28,2023, Elapsed time: 0:03:19
+# Errors: 0, Warnings: 3
 # vsim -voptargs="+acc" work.RISCV_tb 
-# Start time: 13:25:47 on Apr 10,2023
+# Start time: 22:34:14 on Aug 28,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "FSM_UART_rx(fast)".
+# Loading work.RISCV_tb(fast)
+# Loading work.single_cycle_p2(fast)
+# Loading work.core_risc_v(fast)
+# Loading work.Register(fast)
+# Loading work.adder(fast)
+# Loading work.Mux_2to1(fast)
+# Loading work.memory_ROM(fast)
+# Loading work.single_port_rom(fast)
+# Loading work.Mux_4to1(fast)
+# Loading work.RegisterFile(fast)
+# Loading work.WriteControl(fast)
+# Loading work.Registers(fast)
+# Loading work.MUX32input(fast)
+# Loading work.imm(fast)
+# Loading work.ALU(fast)
+# Loading work.Control_unit_riscv(fast)
+# Loading work.ALU_decoder(fast)
+# Loading work.Control(fast)
+# Loading work.MemController(fast)
+# Loading work.MUXNInput(fast)
+# Loading work.UART(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO_in_out(fast)
+# Loading work.single_port_ram(fast)
+vsim work.single_port_rom
+# End time: 22:38:10 on Aug 28,2023, Elapsed time: 0:03:56
+# Errors: 0, Warnings: 1
+# vsim work.single_port_rom 
+# Start time: 22:38:10 on Aug 28,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.single_port_rom(fast)
+vsim work.RISCV_tb
+# End time: 22:38:26 on Aug 28,2023, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 1
+# vsim work.RISCV_tb 
+# Start time: 22:38:26 on Aug 28,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.RISCV_tb(fast)
+vsim -voptargs=+acc work.RISCV_tb
+# End time: 22:38:46 on Aug 28,2023, Elapsed time: 0:00:20
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.RISCV_tb 
+# Start time: 22:38:46 on Aug 28,2023
 # ** Note: (vsim-8009) Loading existing optimized design _opt1
 # Loading work.RISCV_tb(fast)
 # Loading work.single_cycle_p2(fast)
@@ -36,7 +189,349 @@ vsim -voptargs=+acc work.RISCV_tb
 # Loading work.RXshift_register(fast)
 # Loading work.GPIO_in_out(fast)
 # Loading work.single_port_ram(fast)
-do {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/simulation/wave.do}
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/clk_O
 run
-# End time: 14:24:34 on Apr 10,2023, Elapsed time: 0:58:47
-# Errors: 0, Warnings: 1
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/PC
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.RISCV_tb(fast)
+# Loading work.single_cycle_p2(fast)
+# Loading work.core_risc_v(fast)
+# Loading work.Register(fast)
+# Loading work.adder(fast)
+# Loading work.Mux_2to1(fast)
+# Loading work.memory_ROM(fast)
+# Loading work.single_port_rom(fast)
+# Loading work.Mux_4to1(fast)
+# Loading work.RegisterFile(fast)
+# Loading work.WriteControl(fast)
+# Loading work.Registers(fast)
+# Loading work.MUX32input(fast)
+# Loading work.imm(fast)
+# Loading work.ALU(fast)
+# Loading work.Control_unit_riscv(fast)
+# Loading work.ALU_decoder(fast)
+# Loading work.Control(fast)
+# Loading work.MemController(fast)
+# Loading work.MUXNInput(fast)
+# Loading work.UART(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO_in_out(fast)
+# Loading work.single_port_ram(fast)
+run
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/Instr_out
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.RISCV_tb(fast)
+# Loading work.single_cycle_p2(fast)
+# Loading work.core_risc_v(fast)
+# Loading work.Register(fast)
+# Loading work.adder(fast)
+# Loading work.Mux_2to1(fast)
+# Loading work.memory_ROM(fast)
+# Loading work.single_port_rom(fast)
+# Loading work.Mux_4to1(fast)
+# Loading work.RegisterFile(fast)
+# Loading work.WriteControl(fast)
+# Loading work.Registers(fast)
+# Loading work.MUX32input(fast)
+# Loading work.imm(fast)
+# Loading work.ALU(fast)
+# Loading work.Control_unit_riscv(fast)
+# Loading work.ALU_decoder(fast)
+# Loading work.Control(fast)
+# Loading work.MemController(fast)
+# Loading work.MUXNInput(fast)
+# Loading work.UART(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO_in_out(fast)
+# Loading work.single_port_ram(fast)
+run
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q9
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q9
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q11
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q18
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q19
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q20
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q21
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.RISCV_tb(fast)
+# Loading work.single_cycle_p2(fast)
+# Loading work.core_risc_v(fast)
+# Loading work.Register(fast)
+# Loading work.adder(fast)
+# Loading work.Mux_2to1(fast)
+# Loading work.memory_ROM(fast)
+# Loading work.single_port_rom(fast)
+# Loading work.Mux_4to1(fast)
+# Loading work.RegisterFile(fast)
+# Loading work.WriteControl(fast)
+# Loading work.Registers(fast)
+# Loading work.MUX32input(fast)
+# Loading work.imm(fast)
+# Loading work.ALU(fast)
+# Loading work.Control_unit_riscv(fast)
+# Loading work.ALU_decoder(fast)
+# Loading work.Control(fast)
+# Loading work.MemController(fast)
+# Loading work.MUXNInput(fast)
+# Loading work.UART(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO_in_out(fast)
+# Loading work.single_port_ram(fast)
+run
+# Compile of Control.v was successful with warnings.
+# Compile of core_risc_v.v was successful.
+# Compile of MemController.v was successful.
+# Compile of MUXNInput.v was successful.
+# Compile of RISCV_tb.v was successful.
+# Compile of single_cycle_p2.v was successful.
+# Compile of UART.v was successful.
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_register.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of memory_ROM.v was successful.
+# Compile of single_port_rom.v was successful.
+# Compile of GPIO_in_out.v was successful.
+# Compile of Memory_map.v was successful.
+# Compile of single_port_ram.v was successful.
+# Compile of imm.v was successful.
+# Compile of MUX32input.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of Registers.v was successful.
+# Compile of WriteControl.v was successful.
+# Compile of Mux_2to1.v was successful.
+# Compile of Mux_4to1.v was successful.
+# Compile of ALU_decoder.v was successful.
+# Compile of Control_Unit.v was successful.
+# Compile of Control_unit_riscv.v was successful.
+# Compile of riscv_FSM.v was successful.
+# Compile of adder.v was successful.
+# Compile of ALU.v was successful with warnings.
+# 37 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISCV_tb
+# End time: 22:52:33 on Aug 28,2023, Elapsed time: 0:13:47
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" work.RISCV_tb 
+# Start time: 22:52:33 on Aug 28,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.RISCV_tb(fast)
+# Loading work.single_cycle_p2(fast)
+# Loading work.core_risc_v(fast)
+# Loading work.Register(fast)
+# Loading work.adder(fast)
+# Loading work.Mux_2to1(fast)
+# Loading work.memory_ROM(fast)
+# Loading work.single_port_rom(fast)
+# Loading work.Mux_4to1(fast)
+# Loading work.RegisterFile(fast)
+# Loading work.WriteControl(fast)
+# Loading work.Registers(fast)
+# Loading work.MUX32input(fast)
+# Loading work.imm(fast)
+# Loading work.ALU(fast)
+# Loading work.Control_unit_riscv(fast)
+# Loading work.ALU_decoder(fast)
+# Loading work.Control(fast)
+# Loading work.MemController(fast)
+# Loading work.MUXNInput(fast)
+# Loading work.UART(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO_in_out(fast)
+# Loading work.single_port_ram(fast)
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q9
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q18
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q19
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q20
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q21
+add wave -position insertpoint sim:/RISCV_tb/clk
+run
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "Array.dat". (Current address [64], address range [0:63])    : E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM/single_port_ram.v(26)
+#    Time: 0 ps  Iteration: 0  Instance: /RISCV_tb/UUT/RAM_32bit_dataMemory
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q9
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q18
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q19
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q20
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/RegFile/Regs/Q21
+add wave -position insertpoint sim:/RISCV_tb/clk
+run
+# Compile of Control.v was successful with warnings.
+# Compile of core_risc_v.v was successful.
+# Compile of MemController.v was successful.
+# Compile of MUXNInput.v was successful.
+# Compile of RISCV_tb.v was successful.
+# Compile of single_cycle_p2.v was successful.
+# Compile of UART.v was successful.
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_register.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of memory_ROM.v was successful.
+# Compile of single_port_rom.v was successful.
+# Compile of GPIO_in_out.v was successful.
+# Compile of Memory_map.v was successful.
+# Compile of single_port_ram.v was successful.
+# Compile of imm.v was successful.
+# Compile of MUX32input.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of Registers.v was successful.
+# Compile of WriteControl.v was successful.
+# Compile of Mux_2to1.v was successful.
+# Compile of Mux_4to1.v was successful.
+# Compile of ALU_decoder.v was successful.
+# Compile of Control_Unit.v was successful.
+# Compile of Control_unit_riscv.v was successful.
+# Compile of riscv_FSM.v was successful.
+# Compile of adder.v was successful.
+# Compile of ALU.v was successful with warnings.
+# 37 compiles, 0 failed with no errors.
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/simulation/T1Arqui.do}
+vsim -voptargs=+acc work.RISCV_tb
+# End time: 22:58:22 on Aug 28,2023, Elapsed time: 0:05:49
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" work.RISCV_tb 
+# Start time: 22:58:22 on Aug 28,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.RISCV_tb(fast)
+# Loading work.single_cycle_p2(fast)
+# Loading work.core_risc_v(fast)
+# Loading work.Register(fast)
+# Loading work.adder(fast)
+# Loading work.Mux_2to1(fast)
+# Loading work.memory_ROM(fast)
+# Loading work.single_port_rom(fast)
+# Loading work.Mux_4to1(fast)
+# Loading work.RegisterFile(fast)
+# Loading work.WriteControl(fast)
+# Loading work.Registers(fast)
+# Loading work.MUX32input(fast)
+# Loading work.imm(fast)
+# Loading work.ALU(fast)
+# Loading work.Control_unit_riscv(fast)
+# Loading work.ALU_decoder(fast)
+# Loading work.Control(fast)
+# Loading work.MemController(fast)
+# Loading work.MUXNInput(fast)
+# Loading work.UART(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO_in_out(fast)
+# Loading work.single_port_ram(fast)
+do {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/simulation/T1Arqui.do}
+run
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "Array.dat". (Current address [64], address range [0:63])    : E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM/single_port_ram.v(26)
+#    Time: 0 ps  Iteration: 0  Instance: /RISCV_tb/UUT/RAM_32bit_dataMemory
+run
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/PC
+add wave -position insertpoint sim:/RISCV_tb/UUT/core/ROM/instruction
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.RISCV_tb(fast)
+# Loading work.single_cycle_p2(fast)
+# Loading work.core_risc_v(fast)
+# Loading work.Register(fast)
+# Loading work.adder(fast)
+# Loading work.Mux_2to1(fast)
+# Loading work.memory_ROM(fast)
+# Loading work.single_port_rom(fast)
+# Loading work.Mux_4to1(fast)
+# Loading work.RegisterFile(fast)
+# Loading work.WriteControl(fast)
+# Loading work.Registers(fast)
+# Loading work.MUX32input(fast)
+# Loading work.imm(fast)
+# Loading work.ALU(fast)
+# Loading work.Control_unit_riscv(fast)
+# Loading work.ALU_decoder(fast)
+# Loading work.Control(fast)
+# Loading work.MemController(fast)
+# Loading work.MUXNInput(fast)
+# Loading work.UART(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO_in_out(fast)
+# Loading work.single_port_ram(fast)
+run
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "Array.dat". (Current address [64], address range [0:63])    : E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM/single_port_ram.v(26)
+#    Time: 0 ps  Iteration: 0  Instance: /RISCV_tb/UUT/RAM_32bit_dataMemory
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/simulation/T1Arqui.do}
+# End time: 15:50:59 on Aug 30,2023, Elapsed time: 40:52:37
+# Errors: 0, Warnings: 2

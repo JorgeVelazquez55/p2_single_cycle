@@ -13,404 +13,69 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# do single_cycle_p2_run_msim_rtl_verilog.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
+# do single_cycle_p2_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
 # }
-# vlib rtl_work
-# vmap work rtl_work
+# vlib gate_work
+# vmap work gate_work
 # Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
-# vmap work rtl_work 
+# vmap work gate_work 
 # Copying d:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/UART_TX.v}
+# vlog -vlog01compat -work work +incdir+. {single_cycle_p2.vo}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:04 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/UART_TX.v 
-# -- Compiling module UART_TX
-# 
-# Top level modules:
-# 	UART_TX
-# End time: 18:28:04 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/UART_RX.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:04 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/UART_RX.v 
-# -- Compiling module UART_RX
-# 
-# Top level modules:
-# 	UART_RX
-# End time: 18:28:04 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/TXshift_register.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:04 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/TXshift_register.v 
-# -- Compiling module TXshift_register
-# 
-# Top level modules:
-# 	TXshift_register
-# End time: 18:28:04 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/RXshift_register.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:04 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/RXshift_register.v 
-# -- Compiling module RXshift_register
-# 
-# Top level modules:
-# 	RXshift_register
-# End time: 18:28:04 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FSM_UART_tx.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:04 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FSM_UART_tx.v 
-# -- Compiling module FSM_UART_tx
-# 
-# Top level modules:
-# 	FSM_UART_tx
-# End time: 18:28:04 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FSM_UART_rx.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:04 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FSM_UART_rx.v 
-# -- Compiling module FSM_UART_rx
-# 
-# Top level modules:
-# 	FSM_UART_rx
-# End time: 18:28:04 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FF_D_enable.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:04 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FF_D_enable.v 
-# -- Compiling module FF_D_enable
-# 
-# Top level modules:
-# 	FF_D_enable
-# End time: 18:28:05 on Apr 06,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FF_D_2enable.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:05 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/FF_D_2enable.v 
-# -- Compiling module FF_D_2enable
-# 
-# Top level modules:
-# 	FF_D_2enable
-# End time: 18:28:05 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/Counter_Param.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:05 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/Counter_Param.v 
-# -- Compiling module Counter_Param
-# 
-# Top level modules:
-# 	Counter_Param
-# End time: 18:28:05 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/Bit_Rate_Pulse.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:05 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART_Full_Duplex/Bit_Rate_Pulse.v 
-# -- Compiling module Bit_Rate_Pulse
-# 
-# Top level modules:
-# 	Bit_Rate_Pulse
-# End time: 18:28:05 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:05 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/UART.v 
-# -- Compiling module UART
-# 
-# Top level modules:
-# 	UART
-# End time: 18:28:05 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/MemController.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:05 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/MemController.v 
-# -- Compiling module MemController
-# 
-# Top level modules:
-# 	MemController
-# End time: 18:28:05 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/single_cycle_p2.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:05 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/single_cycle_p2.v 
+# Start time: 22:21:37 on Aug 28,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." single_cycle_p2.vo 
 # -- Compiling module single_cycle_p2
 # 
 # Top level modules:
 # 	single_cycle_p2
-# End time: 18:28:05 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/core_risc_v.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:05 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/core_risc_v.v 
-# -- Compiling module core_risc_v
-# 
-# Top level modules:
-# 	core_risc_v
-# End time: 18:28:05 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU/ALU.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:05 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU/ALU.v 
-# -- Compiling module ALU
-# ** Warning: E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU/ALU.v(32): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
-# 
-# Top level modules:
-# 	ALU
-# End time: 18:28:05 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM/single_port_ram.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:05 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM/single_port_ram.v 
-# -- Compiling module single_port_ram
-# 
-# Top level modules:
-# 	single_port_ram
-# End time: 18:28:05 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM/GPIO_in_out.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:05 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_RAM/GPIO_in_out.v 
-# -- Compiling module GPIO_in_out
-# 
-# Top level modules:
-# 	GPIO_in_out
-# End time: 18:28:05 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/SignExtend {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/SignExtend/imm.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:05 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/SignExtend" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/SignExtend/imm.v 
-# -- Compiling module imm
-# 
-# Top level modules:
-# 	imm
-# End time: 18:28:05 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/WriteControl.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:05 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/WriteControl.v 
-# -- Compiling module WriteControl
-# 
-# Top level modules:
-# 	WriteControl
-# End time: 18:28:05 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/Registers.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:05 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/Registers.v 
-# -- Compiling module Registers
-# 
-# Top level modules:
-# 	Registers
-# End time: 18:28:05 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/RegisterFile.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:06 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/RegisterFile.v 
-# -- Compiling module RegisterFile
-# 
-# Top level modules:
-# 	RegisterFile
-# End time: 18:28:06 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/Register.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:06 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/Register.v 
-# -- Compiling module Register
-# 
-# Top level modules:
-# 	Register
-# End time: 18:28:06 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/MUX32input.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:06 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/RegisterFile/MUX32input.v 
-# -- Compiling module MUX32input
-# 
-# Top level modules:
-# 	MUX32input
-# End time: 18:28:06 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Muxs {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Muxs/Mux_4to1.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:06 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Muxs" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Muxs/Mux_4to1.v 
-# -- Compiling module Mux_4to1
-# 
-# Top level modules:
-# 	Mux_4to1
-# End time: 18:28:06 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Muxs {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Muxs/Mux_2to1.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:06 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Muxs" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Muxs/Mux_2to1.v 
-# -- Compiling module Mux_2to1
-# 
-# Top level modules:
-# 	Mux_2to1
-# End time: 18:28:06 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM/Control_unit_riscv.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:06 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM/Control_unit_riscv.v 
-# -- Compiling module Control_unit_riscv
-# 
-# Top level modules:
-# 	Control_unit_riscv
-# End time: 18:28:06 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM/ALU_decoder.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:06 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/FSM/ALU_decoder.v 
-# -- Compiling module ALU_decoder
-# 
-# Top level modules:
-# 	ALU_decoder
-# End time: 18:28:06 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU/adder.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:06 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU/adder.v 
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	adder
-# End time: 18:28:06 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_ROM {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_ROM/memory_ROM.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:06 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_ROM" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_ROM/memory_ROM.v 
-# -- Compiling module memory_ROM
-# 
-# Top level modules:
-# 	memory_ROM
-# End time: 18:28:06 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Control.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:06 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Control.v 
-# -- Compiling module Control
-# ** Warning: E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Control.v(129): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# ** Warning: E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Control.v(143): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# ** Warning: E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Control.v(157): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# 
-# Top level modules:
-# 	Control
-# End time: 18:28:06 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 3
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/MUXNInput.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:06 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/MUXNInput.v 
-# -- Compiling module MUXNInput
-# 
-# Top level modules:
-# 	MUXNInput
-# End time: 18:28:06 on Apr 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_ROM {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_ROM/single_port_rom.v}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:06 on Apr 06,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_ROM" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_ROM/single_port_rom.v 
-# -- Compiling module single_port_rom
-# 
-# Top level modules:
-# 	single_port_rom
-# End time: 18:28:06 on Apr 06,2023, Elapsed time: 0:00:00
+# End time: 22:21:38 on Aug 28,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+E:/Documentos/Otros\ archivos/Cicuitos\ y\ Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/../src {E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/../src/RISCV_tb.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:28:06 on Apr 06,2023
+# Start time: 22:21:38 on Aug 28,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/../src" E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/../src/RISCV_tb.v 
 # -- Compiling module RISCV_tb
 # 
 # Top level modules:
 # 	RISCV_tb
-# End time: 18:28:06 on Apr 06,2023, Elapsed time: 0:00:00
+# End time: 22:21:38 on Aug 28,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  RISCV_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" RISCV_tb 
-# Start time: 18:28:07 on Apr 06,2023
+# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs="+acc"  RISCV_tb
+# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs=""+acc"" RISCV_tb 
+# Start time: 22:21:38 on Aug 28,2023
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Note: (vopt-143) Recognized 1 FSM in module "FSM_UART_rx(fast)".
-# ** Note: (vopt-143) Recognized 1 FSM in module "FSM_UART_tx(fast)".
-# ** Warning: E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/ALU/ALU.v(32): (vopt-2608) Keyword "unsigned" not allowed here in Verilog 2001.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.RISCV_tb(fast)
-# Loading work.single_cycle_p2(fast)
-# Loading work.core_risc_v(fast)
-# Loading work.Register(fast)
-# Loading work.adder(fast)
-# Loading work.Mux_2to1(fast)
-# Loading work.memory_ROM(fast)
-# Loading work.single_port_rom(fast)
-# Loading work.Mux_4to1(fast)
-# Loading work.RegisterFile(fast)
-# Loading work.WriteControl(fast)
-# Loading work.Registers(fast)
-# Loading work.MUX32input(fast)
-# Loading work.imm(fast)
-# Loading work.ALU(fast)
-# Loading work.Control_unit_riscv(fast)
-# Loading work.ALU_decoder(fast)
-# Loading work.Control(fast)
-# Loading work.MemController(fast)
-# Loading work.MUXNInput(fast)
-# Loading work.UART(fast)
-# Loading work.UART_TX(fast)
-# Loading work.Bit_Rate_Pulse(fast)
-# Loading work.FSM_UART_tx(fast)
-# Loading work.Counter_Param(fast)
-# Loading work.TXshift_register(fast)
-# Loading work.FF_D_2enable(fast)
-# Loading work.UART_RX(fast)
-# Loading work.Bit_Rate_Pulse(fast__1)
-# Loading work.FSM_UART_rx(fast)
-# Loading work.FF_D_enable(fast)
-# Loading work.RXshift_register(fast)
-# Loading work.GPIO_in_out(fast)
-# Loading work.single_port_ram(fast)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: (vsim-7) Failed to open readmem file "n_factorial_simulation.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/src/Single_port_ROM/single_port_rom.v(15)
-#    Time: 0 ps  Iteration: 0  Instance: /RISCV_tb/UUT/core/ROM/ROM_32bitD_programMemory
-# End time: 18:30:54 on Apr 06,2023, Elapsed time: 0:02:47
-# Errors: 0, Warnings: 2
+# Break key hit
+# ** Warning: $MODEL_TECH/../intel/verilog/src/mentor/cyclonev_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: single_cycle_p2.vo(13609): (vopt-2685) [TFMPC] - Too few port connections for '\clk40MHz|pll40mhz_inst|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT '.  Expected 15, found 14.
+# ** Warning: single_cycle_p2.vo(13609): (vopt-2718) [TFMPC] - Missing connection for port 'pllen'.
+# ** Warning: single_cycle_p2.vo(13647): (vopt-2685) [TFMPC] - Too few port connections for '\clk40MHz|pll40mhz_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL '.  Expected 24, found 23.
+# ** Warning: single_cycle_p2.vo(13647): (vopt-2718) [TFMPC] - Missing connection for port 'vsspl'.
+# ** Warning: single_cycle_p2.vo(115446): (vopt-2685) [TFMPC] - Too few port connections for 'altera_internal_jtag'.  Expected 21, found 14.
+# ** Warning: single_cycle_p2.vo(115446): (vopt-2718) [TFMPC] - Missing connection for port 'tdocore'.
+# ** Warning: single_cycle_p2.vo(115446): (vopt-2718) [TFMPC] - Missing connection for port 'tmscore'.
+# ** Warning: single_cycle_p2.vo(115446): (vopt-2718) [TFMPC] - Missing connection for port 'tdicore'.
+# ** Warning: single_cycle_p2.vo(115446): (vopt-2718) [TFMPC] - Missing connection for port 'tckcore'.
+# ** Warning: single_cycle_p2.vo(115446): (vopt-2718) [TFMPC] - Missing connection for port 'ntdopinena'.
+# ** Warning: single_cycle_p2.vo(115446): (vopt-2718) [TFMPC] - Missing connection for port 'corectl'.
+# ** Warning: single_cycle_p2.vo(115446): (vopt-2718) [TFMPC] - Missing connection for port 'ntrst'.
+# ** Warning: $MODEL_TECH/../intel/verilog/src/cyclonev_atoms.v(3492): (vopt-2685) [TFMPC] - Too few port connections for 'cyclonev_pll_reconfig_encrypted_inst'.  Expected 33, found 32.
+# ** Warning: $MODEL_TECH/../intel/verilog/src/cyclonev_atoms.v(3492): (vopt-2718) [TFMPC] - Missing connection for port 'mhi'.
+# ** Warning: E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/../src/RISCV_tb.v(8): (vopt-2685) [TFMPC] - Too few port connections for 'UUT'.  Expected 8, found 4.
+# ** Warning: E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/../src/RISCV_tb.v(8): (vopt-2718) [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
+# ** Warning: E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/../src/RISCV_tb.v(8): (vopt-2718) [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
+# ** Warning: E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/../src/RISCV_tb.v(8): (vopt-2718) [TFMPC] - Missing connection for port 'altera_reserved_tck'.
+# ** Warning: E:/Documentos/Otros archivos/Cicuitos y Hardware/Verilog/MDE/RISCV_Single_Cycle/proj_quartus/../src/RISCV_tb.v(8): (vopt-2718) [TFMPC] - Missing connection for port 'altera_reserved_tms'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=20.
+# Break key hit
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./single_cycle_p2_run_msim_gate_verilog.do PAUSED at line 12
+# End time: 22:22:43 on Aug 28,2023, Elapsed time: 0:01:05
+# Errors: 0, Warnings: 20

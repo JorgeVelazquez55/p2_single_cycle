@@ -12,7 +12,7 @@ reg [DATA_WIDTH-1:0] rom[63:0];
 // Memory initialization.
 initial
   begin
-    $readmemh("Factorial.txt", rom);
+    $readmemb("Numero_mas_chico.txt", rom);
   end
   
 assign q = rom[addr[31:2]];

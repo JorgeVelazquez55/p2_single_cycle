@@ -24,12 +24,12 @@ wire [31:0] Data_B, GPIOData, data_o_map, addr_map_o, addr_ram, ram_out, UARTDat
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //clock 1hz generator
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//assign clk=clk_in;
-pll40MHz clk40MHz(
-.refclk(clk_in),   //  refclk.clk
-.rst(rst),      //   reset.reset
-.outclk_0(clk) // outclk0.clk
-	);
+assign clk=clk_in;
+//pll40MHz clk40MHz(
+//.refclk(clk_in),   //  refclk.clk
+//.rst(rst),      //   reset.reset
+//.outclk_0(clk) // outclk0.clk
+//	);
 
 core_risc_v #(.DATA_WIDTH(32), .ADDR_WIDTH (32)) core(
 	.clk_O(clk),
